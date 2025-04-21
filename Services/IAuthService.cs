@@ -5,7 +5,8 @@ namespace Talekhisi.Services
 {
     public interface IAuthService
     {
-        Task<User?> Register(UserDto request);
-        Task <String?>Login(UserDto request);
+        Task<User?> RegisterAsync(UserDto request);
+        Task<TokenResponseDto?> LoginAsync(LoginDto request);
+        Task<TokenResponseDto?> RefreshTokenAsync(RefreshTokenRequestDto request);
     }
 }
